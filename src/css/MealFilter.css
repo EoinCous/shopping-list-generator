@@ -1,0 +1,20 @@
+.meal-filter {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.meal-filter button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background-color: #eee;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.meal-filter button.active {
+  background-color: #3f8f43;
+  color: white;
+}

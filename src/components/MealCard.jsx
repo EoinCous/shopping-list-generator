@@ -13,7 +13,6 @@ function MealCard({meal}){
                 />
                 <div className="meal-info">
                     <h3 className="meal-name">{meal.name}</h3>
-                    <p className="meal-ingredients">{meal.ingredients}</p>
                 </div>
             </Link>
         </div>
