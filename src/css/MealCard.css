@@ -1,0 +1,36 @@
+.meal-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 300px;
+  margin: auto;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.meal-card:hover {
+  transform: translateY(-5px);
+}
+
+.meal-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.meal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.meal-name {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.meal-ingredients {
+  margin: 0.15rem 0;
+  color: #333;
+}

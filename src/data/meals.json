@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "name": "Spaghetti Bolognese",
+    "image": "/images/spaghetti-bolognese.jpeg",
+    "ingredients": ["spaghetti", "minced beef", "onion", "garlic", "tomato sauce", "olive oil", "basil"]
+  },
+  {
+    "id": "2",
+    "name": "Chicken Caesar Salad",
+    "image": "/images/chicken-caesar-salad.jpg",
+    "ingredients": ["chicken breast", "romaine lettuce", "croutons", "parmesan", "caesar dressing"]
+  },
+  {
+    "id": "3",
+    "name": "Omelette",
+    "image": "/images/omelette.jpg",
+    "ingredients": ["eggs", "milk", "cheddar cheese", "spinach", "salt", "pepper"]
+  },
+  {
+    "id": "4",
+    "name": "Stir-Fried Veggie Noodles",
+    "image": "/images/stir-fried-veggie-noodles.jpg",
+    "ingredients": ["noodles", "bell pepper", "broccoli", "soy sauce", "garlic", "sesame oil"]
+  },
+  {
+    "id": "5",
+    "name": "Grilled Cheese Sandwich",
+    "image": "/images/grilled-cheese-sandwich.jpg",
+    "ingredients": ["bread", "cheddar cheese", "butter"]
+  },
+  {
+    "id": "6",
+    "name": "Chicken Curry",
+    "image": "/images/chicken-curry.jpg",
+    "ingredients": ["chicken breast", "onion", "garlic", "coconut milk", "curry powder", "rice"]
+  }
+]
