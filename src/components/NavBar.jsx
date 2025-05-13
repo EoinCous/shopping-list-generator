@@ -9,7 +9,7 @@ function NavBar() {
   return (
     <nav className="navbar">
         <div className="logo">
-            <Link to="/" onClick={() => setMenuOpen(false)}>What We Eating</Link>
+            <Link to="/" onClick={() => setMenuOpen(false)}>What We Eating?</Link>
         </div>
 
       <button className="burger" onClick={toggleMenu}>

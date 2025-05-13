@@ -1,16 +1,24 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --colourprimary: white;
+  --coloursecondary: black;
+  --colouraccent1: #3f8f43;
+  --colouraccent2: #f9a26c;
+  --ff: Inter, sans-serif;
+  --h1: bold 54px/64px var(--ff);
+  --h2: bold 36px/36px var(--ff);
+  --h3: bold 24px/30px var(--ff);
+  --links: bold 18px/18px var(--ff);
+  --p: 18px/30px var(--ff);
+
+  color-scheme: light dark;
+  color: var(--coloursecondary);
+  background-color: var(--colourprimary);
+  font-family: var(--ff);
 }
 
 * {
@@ -38,18 +46,24 @@ body {
   flex-direction: column;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+h1 {
+  font: var(--h1);
+  margin-top: 8px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h2 {
+  font: var(--h2);
+  margin-top: 8px;
+}
+
+h3 {
+  font: var(--h3);
+  margin-top: 8px;
+}
+
+p {
+  font: var(--p);
+  margin-top: 8px;
 }
 
 button {
@@ -58,28 +72,18 @@ button {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  font-family: var(--ff);
+  background-color: var(--colouraccent1);
+  color: var(--colourprimary);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color 0.3s ease;
 }
+
 button:hover {
-  border-color: #646cff;
+  background-color: #347537;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }

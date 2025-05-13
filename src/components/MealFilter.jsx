@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../css/MealFilter.css";
 
 const mealTypes = ["All", "Breakfast", "Lunch", "Dinner"];
