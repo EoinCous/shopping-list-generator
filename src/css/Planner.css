@@ -1,0 +1,56 @@
+.planner-table {
+    overflow-x: auto;
+    margin: 20px auto;
+    max-width: 100%;
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 700px;
+    font-family: Arial, sans-serif;
+}
+
+.planner-table th,
+.planner-table td {
+  border: 1px solid #ccc;
+  padding: 30px 10px;
+  text-align: center;
+}
+
+.header-cell {
+  background-color: #f4f4f4;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.corner-cell {
+  background-color: #f0f0f0;
+}
+
+.meal-type {
+  background-color: #f8f8f8;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+}
+
+.meal-cell:hover {
+  background-color: #fff5cc;
+  cursor: pointer;
+}
+
+.selected-meals {
+    margin-top: 6px;
+  font-size: 13px;
+  color: #333;
+  line-height: 1.4;
+}
+
+select {
+  width: 100%;
+  padding: 6px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: white;
+  margin-bottom: 4px;
+}

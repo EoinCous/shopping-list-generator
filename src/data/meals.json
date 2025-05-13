@@ -40,5 +40,26 @@
     "image": "/images/chicken-curry.jpg",
     "ingredients": ["chicken breast", "onion", "garlic", "coconut milk", "curry powder", "rice"],
     "type": "Dinner"
+  },
+  {
+    "id": 7,
+    "name": "Weetabix",
+    "image": "",
+    "ingredients": ["weetabix", "milk", "honey"],
+    "type": "Breakfast"
+  },
+  {
+    "id": 8,
+    "name": "Spice Bag",
+    "image": "/images/spice-bag.jpeg",
+    "ingredients": ["chicken", "peppers", "onions", "spice bag mix", "potatoes"],
+    "type": "Dinner"
+  },
+  {
+    "id": 9,
+    "name": "Bacon Egg & Cheese",
+    "image": "",
+    "ingredients": ["bread", "bacon", "eggs", "cheese", "butter", "sriracha"],
+    "type": "Lunch"
   }
 ]

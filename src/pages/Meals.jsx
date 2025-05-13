@@ -11,7 +11,6 @@ function Meals(){
 
     return (
         <div className='meals'>
-            <h1>Meals Page</h1>
             <MealFilter selectedType={filter} onSelect={setFilter} />
             <div className='meals-grid'>
                 {filteredMeals.map(meal =>
