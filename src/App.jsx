@@ -5,11 +5,13 @@ import MealDetails from './pages/MealDetails'
 import Meals from './pages/Meals'
 import Planner from './pages/Planner'
 import ShoppingList from './pages/ShoppingList'
+import ScrollToTop from './components/ScrollToTop'
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
     <>
+    <ScrollToTop />
     <NavBar />
       <main className='main-content'>
         <Routes>

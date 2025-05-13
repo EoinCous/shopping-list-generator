@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import meals from '../data/meals.json'
+import "../css/MealDetails.css";
 
 function MealDetails(){
     const { id } = useParams();
@@ -11,16 +12,17 @@ function MealDetails(){
 
     return (
       <div className="meal-detail">
+        <div className="meal-detail-info">
+          <h2>{meal.name}</h2>
+          <p><strong>Type:</strong> {meal.type}</p>
+          <p><strong>Ingredients:</strong> {meal.ingredients.join(", ")}</p>
+          <p><strong>Recipe:</strong> ?</p>
+        </div>
         <img 
           src={meal.image} 
           alt={meal.name} 
           className="meal-detail-image" 
         />
-        <div className="meal-detail-info">
-          <h2>{meal.name}</h2>
-          <p><strong>Type:</strong> {meal.type}</p>
-          <p><strong>Ingredients:</strong> {meal.ingredients.join(", ")}</p>
-        </div>
       </div>
     );
 }

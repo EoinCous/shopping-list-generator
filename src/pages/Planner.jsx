@@ -1,8 +1,10 @@
 import "../css/Planner.css";
 import { useState, useEffect } from 'react';
 import meals from '../data/meals.json';
+import { useNavigate } from 'react-router-dom';
 
 function Planner() {
+  const navigate = useNavigate();
   const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
   const mealTypes = ["Breakfast", "Lunch", "Dinner"];
 
@@ -26,6 +28,11 @@ function Planner() {
   useEffect(() => {
     localStorage.setItem("mealPlan", JSON.stringify(mealPlan));
   }, [mealPlan]);
+
+  const clearMealPlan = () => {
+    localStorage.setItem("mealPlan", JSON.stringify({}));
+    setMealPlan({});
+  }
   
   return (
     <div className="planner">
@@ -70,6 +77,8 @@ function Planner() {
           ))}
         </tbody>
       </table>
+      <button onClick={clearMealPlan}>Clear</button>
+      <button onClick={() => navigate("/shopping-list")}>Generate Shopping List</button>
     </div>
   );
 }

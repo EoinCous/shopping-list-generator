@@ -1,0 +1,23 @@
+.meal-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.meal-detail-image {
+  width: 30%;
+  height: auto;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.meal-detail-info h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.meal-detail-info p {
+  margin-bottom: 1rem;
+  color: #555;
+}

@@ -61,5 +61,12 @@
     "image": "",
     "ingredients": ["bread", "bacon", "eggs", "cheese", "butter", "sriracha"],
     "type": "Lunch"
+  },
+  {
+    "id": 10,
+    "name": "Steak",
+    "image": "",
+    "ingredients": ["steak", "potatoes", "carrots", "gravy", "butter"],
+    "type": "Dinner"
   }
 ]
