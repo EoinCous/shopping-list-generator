@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import meals from '../data/meals.json';
+import emailjs from '@emailjs/browser';
 
 function ShoppingList() {
   const [selectedMeals, setSelectedMeals] = useState([]);
@@ -27,9 +28,27 @@ function ShoppingList() {
   }, {});
   const groupedMeals = Object.values(mealCounts);
 
-  const handleEmail = () => {
-    console.log("Emailing ingredients");
-  }
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      ).then(
+        (result) => {
+          console.log('Email sent successfully:', result.text);
+          alert('Message sent!');
+        },
+        (error) => {
+          console.error('Email send error:', error.text);
+          alert('Something went wrong.');
+        }
+      );
+
+    e.target.reset();
+  } 
 
   return (
     <div className="shopping-list">
@@ -56,7 +75,7 @@ function ShoppingList() {
         </ul>
       </section>
 
-      <button onClick={handleEmail}>Email to Myself</button>
+      <button onClick={sendEmail}>Email to Myself</button>
     </div>
   );
 }

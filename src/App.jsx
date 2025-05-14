@@ -1,4 +1,3 @@
-import NavBar from './components/NavBar'
 import './css/App.css'
 import Home from './pages/Home'
 import MealDetails from './pages/MealDetails'
@@ -7,12 +6,14 @@ import Planner from './pages/Planner'
 import ShoppingList from './pages/ShoppingList'
 import ScrollToTop from './components/ScrollToTop'
 import { Routes, Route } from 'react-router-dom'
+import Footer from './components/Footer'
+import Header from './components/Header'
 
 function App() {
   return (
     <>
     <ScrollToTop />
-    <NavBar />
+    <Header />
       <main className='main-content'>
         <Routes>
           <Route path='/' element={<Home />}/>
@@ -22,6 +23,7 @@ function App() {
           <Route path='/shopping-list' element={<ShoppingList />}/>
         </Routes>
       </main>
+    <Footer />
     </>
   )
 }
