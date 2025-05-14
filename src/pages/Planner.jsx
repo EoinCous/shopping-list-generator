@@ -19,9 +19,14 @@ function Planner() {
   };
 
   const handleChange = (day, mealType, selectedOptions) => {
-    const key = `${day}-${mealType}`;
     const values = Array.from(selectedOptions, (option) => option.value);
-    setMealPlan((prev) => ({ ...prev, [key]: values }));
+    setMealPlan((prev) => ({
+      ...prev,
+      [day]: {
+        ...prev[day],
+        [mealType.toLowerCase()]: values
+      }
+    }));
   };
 
   // Save to localStorage whenever mealPlan changes
@@ -33,7 +38,7 @@ function Planner() {
     localStorage.setItem("mealPlan", JSON.stringify({}));
     setMealPlan({});
   }
-  
+
   return (
     <div className="planner">
       <h2>Choose your meals</h2>
@@ -51,15 +56,16 @@ function Planner() {
             <tr key={mealType}>
               <td className="meal-type">{mealType}</td>
               {daysOfWeek.map((day) => {
-                const key = `${day}-${mealType}`;
                 const options = getMealOptions(mealType);
+                const selectedMeals = mealPlan[day]?.[mealType.toLowerCase()] || [];
+
                 return (
-                  <td key={key} className="meal-cell">
+                  <td key={`${day}-${mealType}`} className="meal-cell">
                     <select
                       multiple
-                      value={mealPlan[key] || []}
+                      value={selectedMeals}
                       onChange={(e) => handleChange(day, mealType, e.target.selectedOptions)}
-                      size={options.length > 4 ? 4 : options.length} // Optional: limit dropdown height
+                      size={options.length > 4 ? 4 : options.length}
                     >
                       {options.map((meal) => (
                         <option key={meal.name} value={meal.name}>
@@ -68,7 +74,7 @@ function Planner() {
                       ))}
                     </select>
                     <div className="selected-meals">
-                      {(mealPlan[key] || []).join(", ")}
+                      {selectedMeals.join(", ")}
                     </div>
                   </td>
                 );

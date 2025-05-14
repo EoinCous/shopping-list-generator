@@ -1,0 +1,21 @@
+.meal-cell:hover {
+  background-color: #fff5cc;
+  cursor: pointer;
+}
+
+.selected-meals {
+    margin-top: 6px;
+  font-size: 13px;
+  color: #333;
+  line-height: 1.4;
+}
+
+select {
+  width: 100%;
+  padding: 6px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: white;
+  margin-bottom: 4px;
+}
