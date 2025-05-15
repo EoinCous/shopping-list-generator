@@ -3,70 +3,267 @@
     "id": 1,
     "name": "Spaghetti Bolognese",
     "image": "/images/spaghetti-bolognese.jpeg",
-    "ingredients": ["spaghetti", "minced beef", "onion", "garlic", "tomato sauce", "olive oil", "basil"],
+    "ingredients": [
+      {"name": "spaghetti", "category": "other"},
+      {"name": "minced beef", "category": "meat"},
+      {"name": "onion", "category": "fruit & veg"},
+      {"name": "garlic", "category": "fruit & veg"},
+      {"name": "tomato sauce", "category": "other"},
+      {"name": "olive oil", "category": "other"},
+      {"name": "basil", "category": "other"}
+    ],
     "type": "Dinner"
   },
   {
     "id": 2,
     "name": "Chicken Caesar Salad",
     "image": "/images/chicken-caesar-salad.jpg",
-    "ingredients": ["chicken breast", "romaine lettuce", "croutons", "parmesan", "caesar dressing"],
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "category": "meat"
+      },
+      {
+        "name": "romaine lettuce",
+        "category": "fruit & veg"
+      },
+      {
+        "name": "croutons",
+        "category": "bread"
+      },
+      {
+        "name": "parmesan",
+        "category": "dairy"
+      },
+      {
+        "name": "caesar dressing",
+        "category": "other"
+      }
+    ],
     "type": "Dinner"
   },
   {
     "id": 3,
     "name": "Omelette",
     "image": "/images/omelette.jpg",
-    "ingredients": ["eggs", "milk", "cheddar cheese", "spinach", "salt", "pepper"],
+    "ingredients": [
+      {
+        "name": "eggs",
+        "category": "dairy"
+      },
+      {
+        "name": "milk",
+        "category": "dairy"
+      },
+      {
+        "name": "cheddar cheese",
+        "category": "dairy"
+      },
+      {
+        "name": "spinach",
+        "category": "fruit & veg"
+      },
+      {
+        "name": "salt",
+        "category": "other"
+      },
+      {
+        "name": "pepper",
+        "category": "other"
+      }
+    ],
     "type": "Breakfast"
   },
   {
     "id": 4,
     "name": "Stir-Fried Veggie Noodles",
     "image": "/images/stir-fried-veggie-noodles.jpg",
-    "ingredients": ["noodles", "bell pepper", "broccoli", "soy sauce", "garlic", "sesame oil"],
+    "ingredients": [
+      {
+        "name": "noodles",
+        "category": "other"
+      },
+      {
+        "name": "bell pepper",
+        "category": "fruit & veg"
+      },
+      {
+        "name": "broccoli",
+        "category": "fruit & veg"
+      },
+      {
+        "name": "soy sauce",
+        "category": "other"
+      },
+      {
+        "name": "garlic",
+        "category": "fruit & veg"
+      },
+      {
+        "name": "sesame oil",
+        "category": "other"
+      }
+    ],
     "type": "Dinner"
   },
   {
     "id": 5,
     "name": "Grilled Cheese Sandwich",
     "image": "/images/grilled-cheese-sandwich.jpg",
-    "ingredients": ["bread", "cheddar cheese", "butter"],
+    "ingredients": [
+      {
+        "name": "bread",
+        "category": "bread"
+      },
+      {
+        "name": "cheddar cheese",
+        "category": "dairy"
+      },
+      {
+        "name": "butter",
+        "category": "dairy"
+      }
+    ],
     "type": "Lunch"
   },
   {
     "id": 6,
     "name": "Chicken Curry",
     "image": "/images/chicken-curry.jpg",
-    "ingredients": ["chicken breast", "onion", "garlic", "coconut milk", "curry powder", "rice"],
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "category": "meat"
+      },
+      {
+        "name": "onion",
+        "category": "fruit & veg"
+      },
+      {
+        "name": "garlic",
+        "category": "fruit & veg"
+      },
+      {
+        "name": "coconut milk",
+        "category": "other"
+      },
+      {
+        "name": "curry powder",
+        "category": "other"
+      },
+      {
+        "name": "rice",
+        "category": "other"
+      }
+    ],
     "type": "Dinner"
   },
   {
     "id": 7,
     "name": "Weetabix",
     "image": "",
-    "ingredients": ["weetabix", "milk", "honey"],
+    "ingredients": [
+      {
+        "name": "weetabix",
+        "category": "bread"
+      },
+      {
+        "name": "milk",
+        "category": "dairy"
+      },
+      {
+        "name": "honey",
+        "category": "other"
+      }
+    ],
     "type": "Breakfast"
   },
   {
     "id": 8,
     "name": "Spice Bag",
     "image": "/images/spice-bag.jpeg",
-    "ingredients": ["chicken", "peppers", "onions", "spice bag mix", "potatoes"],
+    "ingredients": [
+      {
+        "name": "chicken",
+        "category": "meat"
+      },
+      {
+        "name": "peppers",
+        "category": "fruit & veg"
+      },
+      {
+        "name": "onions",
+        "category": "fruit & veg"
+      },
+      {
+        "name": "spice bag mix",
+        "category": "other"
+      },
+      {
+        "name": "potatoes",
+        "category": "fruit & veg"
+      }
+    ],
     "type": "Dinner"
   },
   {
     "id": 9,
     "name": "Bacon Egg & Cheese",
     "image": "",
-    "ingredients": ["bread", "bacon", "eggs", "cheese", "butter", "sriracha"],
+    "ingredients": [
+      {
+        "name": "bread",
+        "category": "bread"
+      },
+      {
+        "name": "bacon",
+        "category": "meat"
+      },
+      {
+        "name": "eggs",
+        "category": "dairy"
+      },
+      {
+        "name": "cheese",
+        "category": "dairy"
+      },
+      {
+        "name": "butter",
+        "category": "dairy"
+      },
+      {
+        "name": "sriracha",
+        "category": "other"
+      }
+    ],
     "type": "Lunch"
   },
   {
     "id": 10,
     "name": "Steak",
     "image": "",
-    "ingredients": ["steak", "potatoes", "carrots", "gravy", "butter"],
+    "ingredients": [
+      {
+        "name": "steak",
+        "category": "meat"
+      },
+      {
+        "name": "potatoes",
+        "category": "fruit & veg"
+      },
+      {
+        "name": "carrots",
+        "category": "fruit & veg"
+      },
+      {
+        "name": "gravy",
+        "category": "other"
+      },
+      {
+        "name": "butter",
+        "category": "dairy"
+      }
+    ],
     "type": "Dinner"
   }
 ]

@@ -4,6 +4,9 @@ import emailjs from '@emailjs/browser';
 
 function ShoppingList() {
   const [selectedMeals, setSelectedMeals] = useState([]);
+  const [groupedMeals, setGroupededMeals] = useState([]);
+  const [allIngredients, setAllIngredients] = useState([]);
+  const [userEmail, setUserEmail] = useState("");
 
   useEffect(() => {
     const rawPlan = localStorage.getItem('mealPlan');
@@ -17,24 +20,34 @@ function ShoppingList() {
 
     // Map meal names to full meal objects
     const mealsSelected = mealNames.map(name => meals.find(meal => meal.name === name));
+
     console.log(mealsSelected);
     setSelectedMeals(mealsSelected);
-  }, []);
 
-  const mealCounts = selectedMeals.reduce((acc, meal) => {
-    const name = meal.name;
-    acc[name] = acc[name] ? { ...acc[name], count: acc[name].count + 1 } : { ...meal, count: 1 };
-    return acc;
-  }, {});
-  const groupedMeals = Object.values(mealCounts);
+    const mealsCount = mealsSelected.reduce((acc, meal) => {
+      const name = meal.name;
+      acc[name] = acc[name] ? { ...acc[name], count: acc[name].count + 1 } : { ...meal, count: 1 };
+      return acc;
+    }, {});
+    
+    console.log(Object.values(mealsCount));
+    setGroupededMeals(Object.values(mealsCount));
+
+    console.log(mealsSelected.map((meal) => meal.ingredients).flat());
+    setAllIngredients(mealsSelected.map((meal) => meal.ingredients).flat());
+  }, []);
+  
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
+    emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        form.current,
+        {
+          user_email: userEmail,
+          ingredients: allIngredients.map((ingredient) => ingredient.name).join(", ")
+        },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       ).then(
         (result) => {
@@ -47,7 +60,7 @@ function ShoppingList() {
         }
       );
 
-    e.target.reset();
+    setUserEmail("");
   } 
 
   return (
@@ -55,7 +68,7 @@ function ShoppingList() {
       <h2>Your Shopping List</h2>
 
       <section>
-        <h3>Selected Meals</h3>
+        <h3>Selected Meals:</h3>
         <ul>
           
           {groupedMeals.map((meal) => (
@@ -67,15 +80,23 @@ function ShoppingList() {
       </section>
 
       <section>
-        <h3>Ingredients Needed</h3>
+        <h3>Ingredients Needed:</h3>
         <ul>
-          {selectedMeals.map((meal, index) => (
-            <li key={`${meal.id}-${index}`}>{meal.ingredients.join(", ")}</li>
+          {allIngredients.map((ingredient, index) => (
+            <li key={`${ingredient.name}-${index}`}>{ingredient.name}</li>
           ))}
         </ul>
       </section>
 
-      <button onClick={sendEmail}>Email to Myself</button>
+      <h3>Send list by email</h3>
+      <input 
+        type="email" 
+        placeholder="johnsmith@example.com" 
+        value={userEmail} 
+        onChange={(e) => setUserEmail(e.target.value)}
+        required
+    ></input>
+    <button onClick={sendEmail}>Email</button>
     </div>
   );
 }

@@ -15,7 +15,7 @@ function MealDetails(){
         <div className="meal-detail-info">
           <h2>{meal.name}</h2>
           <p><strong>Type:</strong> {meal.type}</p>
-          <p><strong>Ingredients:</strong> {meal.ingredients.join(", ")}</p>
+          <p><strong>Ingredients:</strong> {meal.ingredients.map(ingredient => ingredient.name).join(", ")}</p>
           <p><strong>Recipe:</strong> ?</p>
         </div>
         <img 
